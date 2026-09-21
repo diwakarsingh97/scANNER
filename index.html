@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>HUMAN SCANNER</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+
+    <main class="scanner">
+
+        <!-- HEADER -->
+        <header class="topbar">
+
+            <div>
+                <div class="system-name">
+                    HUMAN<span>SCAN</span>
+                </div>
+
+                <div class="system-subtitle">
+                    ADVANCED FACIAL ANALYSIS SYSTEM
+                </div>
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                <span id="systemStatus">SYSTEM READY</span>
+            </div>
+
+        </header>
+
+
+        <!-- MAIN AREA -->
+        <section class="main-grid">
+
+            <!-- CAMERA -->
+            <div class="camera-panel">
+
+                <div class="panel-title">
+                    <span>01</span>
+                    LIVE SCANNER
+                </div>
+
+                <div class="camera-container">
+
+                    <video
+                        id="video"
+                        autoplay
+                        muted
+                        playsinline
+                    ></video>
+
+                    <canvas id="canvas"></canvas>
+
+                    <!-- SCANNING HUD -->
+                    <div class="hud">
+
+                        <div class="corner top-left"></div>
+                        <div class="corner top-right"></div>
+                        <div class="corner bottom-left"></div>
+                        <div class="corner bottom-right"></div>
+
+                        <div class="scan-line"></div>
+
+                        <div class="target-text">
+                            FACE SCAN ACTIVE
+                        </div>
+
+                    </div>
+
+                    <!-- CENTER MESSAGE -->
+                    <div id="cameraMessage" class="camera-message">
+                        INITIALIZING CAMERA...
+                    </div>
+
+                </div>
+
+                <button id="startButton" class="scan-button">
+                    START SCANNER
+                </button>
+
+            </div>
+
+
+            <!-- RESULTS -->
+            <div class="results-panel">
+
+                <div class="panel-title">
+                    <span>02</span>
+                    ANALYSIS
+                </div>
+
+
+                <!-- FACE STATUS -->
+                <div class="result-card">
+
+                    <div class="result-label">
+                        SUBJECT STATUS
+                    </div>
+
+                    <div
+                        id="faceStatus"
+                        class="result-value"
+                    >
+                        WAITING
+                    </div>
+
+                </div>
+
+
+                <!-- EXPRESSION -->
+                <div class="result-card">
+
+                    <div class="result-label">
+                        EXPRESSION
+                    </div>
+
+                    <div
+                        id="expression"
+                        class="result-value"
+                    >
+                        —
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIDENCE -->
+                <div class="result-card">
+
+                    <div class="result-label">
+                        DETECTION CONFIDENCE
+                    </div>
+
+                    <div
+                        id="confidence"
+                        class="result-value"
+                    >
+                        0%
+                    </div>
+
+                    <div class="confidence-bar">
+                        <div
+                            id="confidenceFill"
+                            class="confidence-fill"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <!-- INFO -->
+                <div class="info-box">
+
+                    <div class="info-title">
+                        SCANNER INFORMATION
+                    </div>
+
+                    <p>
+                        This scanner uses browser-based computer
+                        vision to detect a face and analyse facial
+                        landmarks and expression.
+                    </p>
+
+                    <p>
+                        Camera processing happens in your browser.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <div>
+                HUMANSCAN v1.0
+            </div>
+
+            <div>
+                AI VISION SYSTEM
+            </div>
+
+            <div>
+                <span class="footer-dot"></span>
+                ONLINE
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
